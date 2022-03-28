@@ -24,7 +24,7 @@ return image.addBands(image.normalizedDifference(['B8', 'B4']));
 
 // Menambahkan saluran NDVI ke koleksi citra
 var S2 = S2.map(addNDVI);
-// Ekstrak saluarn NDVI dan membuat citra komposit median NDVI
+// Ekstrak saluarn NDVI dan membuat citra komposit median NDVI (Normalized Index)
 var NDVI = S2.select(['nd']);
 var NDVImed = NDVI.median(); //Hanya mengubah nama variabel ini ;)
 
